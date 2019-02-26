@@ -74,6 +74,7 @@ public class ShapeSorter
 	{
 		// TODO: complete this...
 		String strg = "";
+		// Loops through and adds the toString of each of the shape objects in the shapes ArrayList to a string that is returned
 		for(int k = 0; k < shapes.size(); k++)
 		{
 			strg += shapes.get(k).toString();
