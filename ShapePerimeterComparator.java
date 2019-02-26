@@ -33,6 +33,10 @@ public class ShapePerimeterComparator implements Comparator<Shape>
 	public int compare(Shape s1, Shape s2)
 	{
 		// TODO: complete this...
+		/* Compares the perimeter of two shapes and returns a 1 when the perimeter of the first shape is larger than the other,
+		 * -1 is returned when the perimeters of the second shape is greater than that of the first and 
+		 * 0 is returned when the two perimeters are equal
+		 */
 		double peri1 = s1.getPerimeter();
 		double peri2 = s2.getPerimeter();
 		if(peri1 > peri2)
@@ -57,6 +61,7 @@ public class ShapePerimeterComparator implements Comparator<Shape>
 	public boolean equals(Shape s1, Shape s2)
 	{
 		// TODO: complete this...
+		// Compares the perimeter of the two shapes and then returns true if they are equal and false if they are not
 		if(compare(s1, s2) == 0)
 		{
 			return true;
