@@ -33,10 +33,27 @@ public abstract class Polygon extends Shape
 	public double getPerimeter()
     {
     	// TODO: complete this...
-    	double perimeter = 0;
-    	for(int k = 0; k < sideLengths.size(); k++)
+    	double perimeter = 0.0;
+    	if(this.getShapeType().equalsIgnoreCase("EquilateralTriangle"))
     	{
-    		perimeter += sideLengths.get(k);
+    		for(int k = 0; k < 3; k++)
+    		{
+    			perimeter += this.sideLengths.get(k);
+    		}
+    	}
+    	if(this.getShapeType().equalsIgnoreCase("Trapezoid"))
+    	{
+    		for(int k = 0; k < 4; k++)
+    		{
+    			perimeter += this.sideLengths.get(k);
+    		}
+    	}
+    	if(this.getShapeType().equalsIgnoreCase("Rectangle") || this.getShapeType().equalsIgnoreCase("Square"))
+    	{
+    		for(int k = 0; k < 2; k++)
+    		{
+    			perimeter += this.sideLengths.get(k) * 2;
+    		}
     	}
     	return perimeter;
     }
