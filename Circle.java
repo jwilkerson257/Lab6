@@ -42,6 +42,7 @@ public class Circle extends Ellipse
 	public double getPerimeter()
 	{
 		// TODO: complete this...
+		// Calculates the diameter of the circle
 		double diameter = getMajorAxis() + getMinorAxis();
 		return Math.PI * diameter;
 	}
