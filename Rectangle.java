@@ -7,6 +7,10 @@ public class Rectangle extends Polygon
 	public Rectangle(String id, double height, double width)
 	{
 		super(id);
+		this.height = height;
+		this.width = width;
+		sideLengths.add(height);
+		sideLengths.add(width);
 	}
 
 	@Override
@@ -15,26 +19,6 @@ public class Rectangle extends Polygon
 		return height * width;
 	}
 
-	public double getHeight()
-	{
-		return height;
-	}
-
-	public void setHeight(double height)
-	{
-		this.height = height;
-	}
-
-	public double getWidth()
-	{
-		return width;
-	}
-
-	public void setWidth(double width)
-	{
-		this.width = width;
-	}
-	
 	@Override
 	public String getShapeType()
 	{
