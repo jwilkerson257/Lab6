@@ -9,6 +9,7 @@ public class Rectangle extends Polygon
 		super(id);
 		this.height = height;
 		this.width = width;
+		// Adds the length and width to the sideLengths ArrayList
 		sideLengths.add(height);
 		sideLengths.add(width);
 	}
@@ -16,6 +17,7 @@ public class Rectangle extends Polygon
 	@Override
 	public double getArea()
 	{
+		// Calculates the Area of the rectangle
 		return height * width;
 	}
 
