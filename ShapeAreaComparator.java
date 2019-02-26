@@ -33,11 +33,13 @@ public class ShapeAreaComparator implements Comparator<Shape>
 	public int compare(Shape s1, Shape s2)
 	{
 		// TODO: complete this...
-		if(s1.getArea() > s2.getArea())
+		double area1 = s1.getArea();
+		double area2 = s2.getArea();
+		if(area1 > area2)
 		{
 			return 1;
 		}
-		if(s1.getArea() < s2.getArea())
+		if(area1 < area2)
 		{
 			return -1;
 		}
@@ -59,6 +61,7 @@ public class ShapeAreaComparator implements Comparator<Shape>
 		{
 			return true;
 		}
-		return false;
+		else
+			return false;
 	}
 }
