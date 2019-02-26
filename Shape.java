@@ -96,6 +96,7 @@ public abstract class Shape implements Comparable<Shape>
 	public int compareTo(Shape s)
 	{
 		// TODO: complete this...
+		// First compares the area of the 2 shapes and then if the area is equal to one another then it compares the area and returns a value based on that
 		if(this.getArea() > s.getArea())
 		{
 			return 1;
