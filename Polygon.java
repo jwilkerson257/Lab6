@@ -21,6 +21,7 @@ public abstract class Polygon extends Shape
     public Polygon(String id)
     {
         super(id);
+	// Initializes the sideLengths arrayList for classes that inherit the Polygon class
         sideLengths = new ArrayList<Double>();
     }
 
@@ -34,6 +35,7 @@ public abstract class Polygon extends Shape
     {
     	// TODO: complete this...
     	double perimeter = 0.0;
+	//calculates the perimeter based on the type of polygon it is from the getShapeType method
     	if(this.getShapeType().equalsIgnoreCase("EquilateralTriangle"))
     	{
     		for(int k = 0; k < 3; k++)
