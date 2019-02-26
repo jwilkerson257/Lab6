@@ -24,6 +24,7 @@ public class EquilateralTriangle extends Polygon
 		// TODO: complete this...
 		super(id);
 		this.sideLength = sideLength;
+		// Adds the side length to the sideLengths array 3 times for 3 side of the triangle
 		sideLengths.add(sideLength);
 		sideLengths.add(sideLength);
 		sideLengths.add(sideLength);
@@ -37,6 +38,7 @@ public class EquilateralTriangle extends Polygon
 	@Override
 	public double getArea()
 	{
+		// Calculates the area of the equilateral triangle
 		return sideLength * sideLength * (Math.sqrt(3) / 4);
 	}
 
