@@ -33,6 +33,10 @@ public class ShapeAreaComparator implements Comparator<Shape>
 	public int compare(Shape s1, Shape s2)
 	{
 		// TODO: complete this...
+		/* Compares the area of two shapes and returns 1 if the area of the first shape is larger than the second,
+		 * -1 is returned if the second shape is bigger than the other and returns 0 if the area of the two shapes
+		 * are equal
+		 */
 		double area1 = s1.getArea();
 		double area2 = s2.getArea();
 		if(area1 > area2)
@@ -57,6 +61,7 @@ public class ShapeAreaComparator implements Comparator<Shape>
 	public boolean equals(Shape s1, Shape s2)
 	{
 		// TODO: complete this...
+		// Returns true if the area of the two shapes are equal and if they are not then the method returns false
 		if(compare(s1, s2) == 0)
 		{
 			return true;
