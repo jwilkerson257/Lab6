@@ -166,10 +166,11 @@ public class ShapeSorterTest
 		sorter.addShape(e);
 		sorter.sortShapes();
 		
-		for(int k = 0; k < sorter.shapes.size(); k++)
+		for(int k = 0; k < sorter.shapes.size()-1; k++)
 		{
 			strg += sorter.shapes.get(k).toString() + "\n";
 		}
+		strg += sorter.shapes.get(sorter.shapes.size()-1).toString() + "";
 		
 		Assert.assertEquals("ShapeSorter toString is incorrect.", strg, sorter.toString());
 	}
