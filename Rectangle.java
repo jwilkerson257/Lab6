@@ -11,6 +11,8 @@ public class Rectangle extends Polygon
 		this.width = width;
 		// Adds the length and width to the sideLengths ArrayList
 		sideLengths.add(height);
+		sideLengths.add(height);
+		sideLengths.add(width);
 		sideLengths.add(width);
 	}
 
