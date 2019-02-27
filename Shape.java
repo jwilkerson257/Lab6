@@ -96,7 +96,11 @@ public abstract class Shape implements Comparable<Shape>
 	public int compareTo(Shape s)
 	{
 		// TODO: complete this...
-		// First compares the area of the 2 shapes and then if the area is equal to one another then it compares the area and returns a value based on that
+		/* First compares the area of the 2 shapes and then if the area is equal to one another
+		 * then it compares the area and returns a value based on that
+		 */
+		 
+		// Compares the area of the shapes
 		if(this.getArea() > s.getArea())
 		{
 			return 1;
@@ -105,23 +109,19 @@ public abstract class Shape implements Comparable<Shape>
 		{
 			return -1;
 		}
-		if(this.getArea() == s.getArea())
+		// Compares the perimeters of the shapes if the area is equal
+		if(this.getPerimeter() > s.getPerimeter())
 		{
-			if(this.getPerimeter() > s.getPerimeter())
-			{
-				return 1;
-			}
-			if(this.getPerimeter() < s.getPerimeter())
-			{
-				return -1;
-			}
-			if(this.getPerimeter() == s.getPerimeter())
-			{
-				return 0;
-			}
-			
+			return 1;
 		}
-		return 0;
+		if(this.getPerimeter() < s.getPerimeter())
+		{
+			return -1;
+		}
+		else
+		{
+			return 0;
+		}
 	}
 
 	/**
@@ -156,6 +156,6 @@ public abstract class Shape implements Comparable<Shape>
 	public String toString()
 	{
 		// TODO: complete this...
-		return String.format("%s\t ID = %s\t area = %.3f\t perimeter = %.3f\n", getShapeType(), getId(), getArea(), getPerimeter());
+		return String.format("%s:\t ID = %s\t area = %.3f\t perimeter = %.3f", getShapeType(), getId(), getArea(), getPerimeter());
 	}
 }
