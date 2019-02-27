@@ -47,7 +47,10 @@ public class ShapeAreaComparator implements Comparator<Shape>
 		{
 			return -1;
 		}
-		return 0;
+		else
+		{
+			return 0;
+		}
 	}
 
 	/**
@@ -62,11 +65,6 @@ public class ShapeAreaComparator implements Comparator<Shape>
 	{
 		// TODO: complete this...
 		// Returns true if the area of the two shapes are equal and if they are not then the method returns false
-		if(compare(s1, s2) == 0)
-		{
-			return true;
-		}
-		else
-			return false;
+		return compare(s1, s2) == 0;
 	}
 }
