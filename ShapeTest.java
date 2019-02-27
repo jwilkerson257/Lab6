@@ -63,6 +63,7 @@ public class ShapeTest
 	public void TrapezoidTest()
 	{
 		// TODO: complete this...
+		// Calculates the area of a trapezoid in order to test the getArea method in the Trapezoid class
 		double a = 10.0;
 		double b = 6.0;
 		double c = 5.0;
