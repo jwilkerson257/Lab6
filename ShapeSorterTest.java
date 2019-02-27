@@ -80,6 +80,7 @@ public class ShapeSorterTest
 		sorter.addShape(b);
 		sorter.addShape(c);
 		sorter.addShape(d);
+		// Sorts the ArrayList using the method compare method in the ShapeAreaComparator class
 		sorter.sortShapes(new ShapeAreaComparator());
 		
 		Assert.assertEquals("Shapes ordered incorrectly...", sorter.shapes.get(0), d);
@@ -106,6 +107,7 @@ public class ShapeSorterTest
 		sorter.addShape(b);
 		sorter.addShape(c);
 		sorter.addShape(d);
+		// Sorts the ArrayList using the method compare method in the ShapePerimeterComparator class
 		sorter.sortShapes(new ShapePerimeterComparator());
 		
 		Assert.assertEquals("Shapes ordered incorrectly...", sorter.shapes.get(0), d);
