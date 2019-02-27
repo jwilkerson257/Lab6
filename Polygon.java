@@ -52,9 +52,9 @@ public abstract class Polygon extends Shape
     	}
     	if(this.getShapeType().equalsIgnoreCase("Rectangle") || this.getShapeType().equalsIgnoreCase("Square"))
     	{
-    		for(int k = 0; k < 2; k++)
+    		for(int k = 0; k < 4; k++)
     		{
-    			perimeter += this.sideLengths.get(k) * 2;
+    			perimeter += this.sideLengths.get(k) ;
     		}
     	}
     	return perimeter;
