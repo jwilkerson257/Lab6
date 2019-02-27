@@ -47,7 +47,10 @@ public class ShapePerimeterComparator implements Comparator<Shape>
 		{
 			return -1;
 		}
-		return 0;
+		else
+		{
+			return 0;
+		}
 	}
 
 	/**
@@ -62,10 +65,6 @@ public class ShapePerimeterComparator implements Comparator<Shape>
 	{
 		// TODO: complete this...
 		// Compares the perimeter of the two shapes and then returns true if they are equal and false if they are not
-		if(compare(s1, s2) == 0)
-		{
-			return true;
-		}
-		return false;
+		return compare(s1, s2) == 0;
 	}
 }
