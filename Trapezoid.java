@@ -33,6 +33,7 @@ public class Trapezoid extends Polygon
 		this.rightSide = rightSide;
 		this.topBase = topBase;
 		this.bottomBase = bottomBase;
+		
 		// Adds the side lengths of all the sides to the sideLengths ArrayList
 		sideLengths.add(leftSide);
 		sideLengths.add(rightSide);
