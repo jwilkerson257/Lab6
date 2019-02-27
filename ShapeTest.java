@@ -63,6 +63,7 @@ public class ShapeTest
 	public void TrapezoidTest()
 	{
 		// TODO: complete this...
+		
 		// Calculates the area of a trapezoid in order to test the getArea method in the Trapezoid class
 		double a = 10.0;
 		double b = 6.0;
@@ -127,7 +128,7 @@ public class ShapeTest
 	{
 		// TODO: complete this...
 		Shape temp = new Rectangle("Rectangle5", 5.0, 7.0);
-		String strg = String.format("%s\t ID = %s\t area = %.3f\t perimeter = %.3f\n", temp.getShapeType(), temp.getId(), temp.getArea(), temp.getPerimeter());
+		String strg = String.format("%s:\t ID = %s\t area = %.3f\t perimeter = %.3f", temp.getShapeType(), temp.getId(), temp.getArea(), temp.getPerimeter());
 		Assert.assertEquals("Shape toString incorrect.", strg, temp.toString());
 		
 	}
@@ -194,15 +195,20 @@ public class ShapeTest
 		Shape sqr = new Square("S1", 3.0);
 		Shape rect2 = new Rectangle("R2", 1.0, 9.0);
 		Shape sqr2 = new Square("S2", 5.0);
+		Shape rect3 = new Rectangle("R3", 25.0, 1.0);
 		
 		// Test equal shapes
 		Assert.assertEquals("compareTo should find shapes equal.", 0, rect.compareTo(sqr));
 		
-		// Test unequal shapes
+		// Test unequal area and unequal perimeter shapes
 		Assert.assertEquals("compareTo gave incorrect ordering.", 1, sqr2.compareTo(rect));
         Assert.assertEquals("compareTo gave incorrect ordering.", -1, rect.compareTo(sqr2));
         
-        // Test unequal perimeter and area
+        // Test equal are and unequal perimeter
+        Assert.assertEquals("compareTo gave incorrect ordering.", -1, sqr2.compareTo(rect3));
+        Assert.assertEquals("compareTo gave incorrect ordering.", 1, rect3.compareTo(sqr2));
+        
+        // Test unequal perimeter and unequal area
         Assert.assertEquals("compareTo gave incorrect ordering.", 1, sqr2.compareTo(rect2));
         Assert.assertEquals("compareTo gave incorrect ordering.", -1, rect2.compareTo(sqr2));
     }
